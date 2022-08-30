@@ -1,0 +1,52 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string firstname = "Fred ";
+      Console.WriteLine(firstname); 
+      string lastname = "Richards";
+      Console.WriteLine(lastname); 
+      
+      int age = 24;
+      Console.WriteLine(age); 
+      
+      int yob = 2001
+      Console.WriteLine(yob);
+      
+      static void Main(string[] args)
+    {
+      int myNum = 10;
+      myNum = 30;
+      Console.WriteLine(myNum);
+    
+     const int myNum = 50;
+      Console.WriteLine(myNum);
+      
+      const int myNum = 150;
+      Console.WriteLine(myNum);
+    
+    double myDoubleNum = 19.99D;
+    
+    float mic = 5.24f, bic = 3.17f;
+    Console.write(mic + bic);
+    
+    bool is CageOpen = false;
+    bool is CaveClosed = true;
+    Console.WriteLine( "Is the cage open" +isCageOpen);
+    Console.WriteLine( "Is the cage closed" +isCageClosed);
+     char myLetter = 'X';  // character
+     char myLetter = 'Y';  // character
+    
+     string myText = "Howdy Man";
+     string myText = "Holy Stromboli";
+    Console.WriteLine(myText);
+    Console.WriteLine(myText);
+       
+      
+    }
+  }
+}

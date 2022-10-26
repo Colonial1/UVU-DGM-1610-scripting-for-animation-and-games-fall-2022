@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2D : MonoBehaviour
 {
     // Player Stats
     public float speed;
@@ -10,10 +10,10 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
 
     // Player Rigidbody
-    private Rigidbody2D rd;
+    private Rigidbody2D rb;
     private bool isFacingRight = true; 
     
-    // Player JUmp
+    // Player Jump
     private bool isGrounded = true;
     public Transform groundCheck;
     public float checkRadius;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
            
     }
  // Update is called once per frame.
-    void Update
+    void Update()
     {
       if(isGrounded)
         {

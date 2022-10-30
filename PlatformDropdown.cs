@@ -9,7 +9,7 @@ public class PlatformDropdown : MonoBehaviour
     
     void Start()
     {
-        effector2D = GetComponent<PlatformEffector2D();
+        effector2D = GetComponent<PlatformEffector2D>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class PlatformDropdown : MonoBehaviour
           }
         }
 
-        if(Input.GetKey(KeyCode.w))
+        if(Input.GetKey(KeyCode.W))
         {
           effector2D.rotationalOffset = 0;  
         }

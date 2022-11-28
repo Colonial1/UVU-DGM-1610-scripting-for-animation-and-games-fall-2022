@@ -1,40 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-public class ScoreManager : MonoBehaviour
-{
-    public int score;
-    public TextMeshProUGUI scoreText;
 
+public class SpawnManager : MonoBehaviour
+{
+    public GameObject[] balloonPrefabs;
+    public float startDelay = 0.5f;
+    
+    public float spawnInterval = 1.5f;
+
+ 
+    public float xRange = 5;
+    
     // Start is called before the first frame update
     void Start()
     {
-       UpdateScoreText();
+        InvokeRepeating("SpawnRandomBalloon", startDelay, spawnInterval);
     }
 
+  
+
+    void SpawnRandomBalloon()
+    {
+        // Get a random position on the x-axis
+        Vector3 spawnPosx = new Vector3(Random.Range(-xRange,xRange),0,0);
+
+        //Pick a random balloon from the balloon array
+        int balloonIndex = Random.Range(0,balloonPrefabs.Length);
     
-
-public void IncreaseScoreText(int amount)
-{
-    score += amount; //Increase score by a certain amount (Math)
-   
-    UpdateScoreText();
-
-}
- 
-public void DecreaseScoreText(int amount)
-{
-    score -= amount; //Decrease score by a certain amount (Math)
-    UpdateScoreText();
-
-}
-
-
-
-public void UpdateScoreText()
-{
-scoreText.text = "Score: "+ score;
-
-}
+        // Spawn a random balloon at spawn point
+        Instantiate(balloonPrefabs[balloonIndex], spawnPosx, balloonPrefabs[balloonIndex].transform.rotation);
+    }
 }

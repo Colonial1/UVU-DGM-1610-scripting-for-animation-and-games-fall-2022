@@ -17,7 +17,7 @@ public class CollectObject : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision Detected!" + collision.tag);
+       
         if (collision.tag == "PlayerCollider")
         {
             Destroy(gameObject);

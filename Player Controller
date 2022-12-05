@@ -58,3 +58,30 @@ public class PlayerController : MonoBehaviour
     Destroy(other.gameObject);
     }
 }
+
+    
+    //Keep player within set bounds
+    //Keep player inside right wall at set xRange
+
+    if(transform.position.x > xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+    
+    if(transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+    if(Input.GetKeyDown(KeyCode.Space))
+    {
+        blasterAudio.PlayOneShot(laserBlast,1.0f);
+        Instantiate(LaserBolt, Blaster.transform.position, Blaster.transform.rotation); // Initiate LaserBolt GameObject at Blaster position
+    }
+    
+    }
+    // Delete any object with a trigger that hits the player
+    private void Ontrigger(Collider other)
+ {
+    Destroy(other.gameObject);
+    }
+}

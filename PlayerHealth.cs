@@ -39,3 +39,10 @@ public class PlayerHealth : MonoBehaviour
     }
 }
 
+
+        {
+            currentHealth = maxHealth;
+        }
+    }
+}
+

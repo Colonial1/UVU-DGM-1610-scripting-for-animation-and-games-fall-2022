@@ -58,6 +58,14 @@ public class Enemy : MonoBehaviour{
             Die();
     }
 
+    void OnCollisionEnter(Collision Col)
+    {
+        if (Col.collider.gameObject == player)
+        {
+            player.GetComponent<PlayerController>().TakeDamage(1);
+        }
+    }
+
     void Die()
     {
         //GameManager.instance.AddScore(scoreToGive);

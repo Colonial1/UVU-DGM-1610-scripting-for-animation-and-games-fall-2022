@@ -51,7 +51,7 @@ public class Pickup : MonoBehaviour
                 print("Type not accepted");
                 break;
             }
-           // other.GetComponent<AudioSource>.PlayOneShot(pickupSFX);
+            other.GetComponent<AudioSource>().PlayOneShot(pickupSFX);
             Destroy(gameObject);
         }
     }
@@ -68,5 +68,3 @@ public class Pickup : MonoBehaviour
 
         if (transform.position == startPos + offset)
             bobbingUp = !bobbingUp;
-    }
-}

@@ -53,9 +53,11 @@ public class PlayerController : MonoBehaviour
 
      public void GiveHealth(int amountToGive)
      {
+    
         curHp = Mathf.Clamp(curHp + amountToGive, 0, maxHp);
-        GameUI.instance.UpdateHealthBar(curHp, maxHp);
+        //GameUI.instance.UpdateHealthBar(curHp, maxHp);
          Debug.Log("Player has been healed!");
+
      }
 
     // public void GiveAmmo(int amountToGive)
